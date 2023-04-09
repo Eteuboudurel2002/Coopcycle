@@ -1,0 +1,41 @@
+{
+  "applications": ["Coopcycle"],
+  "changelogDate": "20230408220202",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "produit",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "prix",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Produit",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "boutique",
+      "otherEntityRelationshipName": "produit",
+      "relationshipName": "idboutique",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "panier",
+      "otherEntityRelationshipName": "produit",
+      "ownerSide": false,
+      "relationshipName": "panier",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

@@ -1,0 +1,30 @@
+{
+  "coopcycleApp": {
+    "boutique": {
+      "home": {
+        "title": "Boutiques",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Boutique",
+        "createOrEditLabel": "Créer ou éditer un Boutique",
+        "notFound": "Aucun Boutique trouvé"
+      },
+      "created": "Un nouveau Boutique a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Boutique avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Boutique avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Boutique {{ id }} ?"
+      },
+      "detail": {
+        "title": "Boutique"
+      },
+      "id": "ID",
+      "name": "Name",
+      "activity": "Activity",
+      "description": "Description",
+      "address": "Address",
+      "produit": "Produit",
+      "proprio": "Proprio",
+      "cooperative": "Cooperative"
+    }
+  }
+}

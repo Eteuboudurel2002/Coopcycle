@@ -1,0 +1,111 @@
+application {
+  config {
+    baseName Coopcycle
+    applicationType monolith
+    prodDatabaseType postgresql
+    clientFramework react
+    clientTheme darkly
+    languages [en,fr,es,de,it]
+    serverPort 8080
+  }
+
+  
+
+ entities Utilisateur,Cooperative, Produit, Panier, Boutique, Course
+  
+  
+  dto * with mapstruct
+}
+ 
+ enum Role {
+  CLIENT,
+  ARTISANT,
+  COURSIER,
+  DG,
+  RESTAURATEUR
+  }
+
+ entity Utilisateur{
+    /**
+   * Aucune clé primaire (id) n'est définie pour les relations
+   * en raison de la génération automaitque des clés primaires 
+   * des relations par Jhipster
+   */
+    name String required
+    age Integer min(18) max(120) required
+    address String required
+    email String pattern(/^[\w.%+-]+@[A-Za-z0-9.-]\.[a-zA-Z\.]{2,6}$/)
+    tel String required pattern (/^0[1-9](?:[\s]?[0-9]{2}){4}$/)
+    role Role required
+    
+  }
+
+
+ entity Cooperative{
+    name String required
+    zone String required
+
+  }
+
+   
+ entity Produit{
+    name String required
+    prix Integer required
+
+
+
+  }
+   
+ entity Panier{
+    dateCreation LocalDate required
+    dateModification LocalDate required
+    statut String required
+    total Integer required
+
+  }
+
+
+ entity Boutique{
+    
+    name String required
+    activity String // pizzeria, crêperie...
+    description String required
+    address String required
+
+  }
+
+  entity Course{
+    /**
+   * Objet créer lors de la validation d'un panier
+   */
+    echeance String required
+    dateCreation LocalDate required
+    statut String required
+    
+  }
+
+
+  relationship OneToMany {
+    Utilisateur to Boutique{proprio required }
+    Utilisateur to Panier{idClient required}
+    Utilisateur to Course{idCoursier required}
+    Cooperative to Utilisateur{idCoop}
+    Boutique to Produit{idboutique required}
+
+  }
+
+  relationship OneToOne {
+    Course{idPanier required } to Panier
+    Cooperative{idDG required} to Utilisateur
+
+
+
+  }
+
+  relationship ManyToMany {
+    Cooperative to Boutique
+    Panier to Produit
+
+
+  }
+paginate * with infinite-scroll

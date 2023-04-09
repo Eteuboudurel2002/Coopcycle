@@ -1,0 +1,77 @@
+{
+  "applications": ["Coopcycle"],
+  "changelogDate": "20230408220002",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "utilisateur",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"],
+      "javadoc": "Aucune clé primaire (id) n'est définie pour les relations\\nen raison de la génération automaitque des clés primaires\\ndes relations par Jhipster"
+    },
+    {
+      "fieldName": "age",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["min", "max", "required"],
+      "fieldValidateRulesMax": "120",
+      "fieldValidateRulesMin": "18"
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["pattern"],
+      "fieldValidateRulesPattern": "^[\\w.%+-]+@[A-Za-z0-9.-]\\.[a-zA-Z\\.]{2,6}$"
+    },
+    {
+      "fieldName": "tel",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "pattern"],
+      "fieldValidateRulesPattern": "^0[1-9](?:[\\s]?[0-9]{2}){4}$"
+    },
+    {
+      "fieldName": "role",
+      "fieldType": "Role",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "CLIENT,ARTISANT,COURSIER,DG,RESTAURATEUR"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Utilisateur",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "boutique",
+      "otherEntityRelationshipName": "proprio",
+      "relationshipName": "boutique",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "panier",
+      "otherEntityRelationshipName": "idClient",
+      "relationshipName": "panier",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "course",
+      "otherEntityRelationshipName": "idCoursier",
+      "relationshipName": "course",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "cooperative",
+      "otherEntityRelationshipName": "utilisateur",
+      "relationshipName": "idCoop",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

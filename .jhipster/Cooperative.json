@@ -1,0 +1,47 @@
+{
+  "applications": ["Coopcycle"],
+  "changelogDate": "20230408220102",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "cooperative",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "zone",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Cooperative",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "utilisateur",
+      "ownerSide": true,
+      "relationshipName": "idDG",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "utilisateur",
+      "otherEntityRelationshipName": "idCoop",
+      "relationshipName": "utilisateur",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "boutique",
+      "otherEntityRelationshipName": "cooperative",
+      "ownerSide": true,
+      "relationshipName": "boutique",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

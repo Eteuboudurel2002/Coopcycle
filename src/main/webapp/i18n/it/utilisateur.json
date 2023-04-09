@@ -1,0 +1,36 @@
+{
+  "coopcycleApp": {
+    "utilisateur": {
+      "home": {
+        "title": "Utilisateurs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo Utilisateur",
+        "createOrEditLabel": "Genera o modifica un Utilisateur",
+        "notFound": "No Utilisateurs found"
+      },
+      "created": "&Egrave; stato generato un nuovo Utilisateur con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Utilisateur identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Utilisateur con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Utilisateur {{ id }}?"
+      },
+      "detail": {
+        "title": "Utilisateur"
+      },
+      "id": "ID",
+      "name": "Name",
+      "age": "Age",
+      "address": "Address",
+      "email": "Email",
+      "tel": "Tel",
+      "role": "Role",
+      "boutique": "Boutique",
+      "panier": "Panier",
+      "course": "Course",
+      "idCoop": "Id Coop",
+      "help": {
+        "name": "Aucune clé primaire (id) n&#39;est définie pour les relations\nen raison de la génération automaitque des clés primaires\ndes relations par Jhipster"
+      }
+    }
+  }
+}

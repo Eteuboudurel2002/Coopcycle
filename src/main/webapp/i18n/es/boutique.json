@@ -1,0 +1,30 @@
+{
+  "coopcycleApp": {
+    "boutique": {
+      "home": {
+        "title": "Boutiques",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Boutique",
+        "createOrEditLabel": "Crear o editar Boutique",
+        "notFound": "Ningún Boutiques encontrado"
+      },
+      "created": "Un nuevo Boutique ha sido creado con el identificador {{ param }}",
+      "updated": "Un Boutique ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Boutique ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Boutique {{ id }}?"
+      },
+      "detail": {
+        "title": "Boutique"
+      },
+      "id": "ID",
+      "name": "Name",
+      "activity": "Activity",
+      "description": "Description",
+      "address": "Address",
+      "produit": "Produit",
+      "proprio": "Proprio",
+      "cooperative": "Cooperative"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "coopcycleApp": {
+    "course": {
+      "home": {
+        "title": "Courses",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Course",
+        "createOrEditLabel": "Créer ou éditer un Course",
+        "notFound": "Aucun Course trouvé"
+      },
+      "created": "Un nouveau Course a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Course avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Course avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Course {{ id }} ?"
+      },
+      "detail": {
+        "title": "Course"
+      },
+      "id": "ID",
+      "echeance": "Echeance",
+      "dateCreation": "Date Creation",
+      "statut": "Statut",
+      "idPanier": "Id Panier",
+      "idCoursier": "Id Coursier",
+      "help": {
+        "echeance": "Objet créer lors de la validation d&#39;un panier"
+      }
+    }
+  }
+}
